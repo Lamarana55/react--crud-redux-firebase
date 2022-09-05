@@ -10,8 +10,8 @@ const ConnectModal = () => {
             
             <div className="header-btn">
                <button style={{background: signUp? "rgb(28,28,38)": "rgb(83,83,83)"}}
-               onClick={() => setSignUp(true)}
-               > S'inscrire</button>
+               onClick={() => setSignUp(true)}>
+                 S'inscrire</button>
                <button style={{background: signUp? "rgb(83,83,83)": "rgb(28,28,38)"}}
              onClick={() => setSignUp(false)} > Se connecter</button>
             </div>

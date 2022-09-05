@@ -1,14 +1,18 @@
 import React, { useRef } from 'react';
-import { auth } from '../utils/firebase.config';
+import { auth } from '../utils/firebase.config.js';
 
 const SignUp = () => {
     const registerEmail = useRef();
     const registerPassword = useRef();
 
     const handleRegister = (e) =>{
+        console.log(e);
         e.preventDefault();
         try {
-            auth.createUserWithEmailAndPassword(registerEmail.current.value, registerPassword.current.value)
+            console.log("###################")
+            auth.createUserWithEmailAndPassword(
+                registerEmail.current.value, 
+                registerPassword.current.value);
         } catch (error) {
             console.log(error.message());
         }
